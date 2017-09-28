@@ -1,0 +1,59 @@
+doctype html
+html(xmlns='http://www.w3.org/1999/xhtml')
+
+  //= template/head.jade
+
+  body
+    #wrapper
+
+      #scene
+        div(data-depth="0.2").layer
+          img(src="images/interactive-bg.png", alt="")
+
+      header.header.header-inner
+        .container
+          .logo
+            a(href="#!")
+              img(src="images/logo.png", alt="logo")
+          
+          .header-body
+            .user-name [NAME]
+            .header-title Fundamentals of Managed Care
+
+      section.middle
+        
+        .container
+
+          .text-center
+            .title-caption
+              span.left-decor 
+              span.right-decor 
+              | TAP ON AN AVAILABLE ASSIGNMENT TO START OR COMPLETE YOUR TRAINING
+
+
+          .nav-wrap
+            .nav-wrap__item
+              .nav-item
+                .nav-item__corner.left-top
+                .nav-item__corner.right-top
+                .nav-item__corner.right-bottom
+                .nav-item__corner.left-bottom
+                .nav-item__text Managed Care 101
+
+              .item-status
+                .status-title IN PROGRESS
+
+
+            .nav-wrap__item
+              .nav-item
+                .nav-item__corner.left-top
+                .nav-item__corner.right-top
+                .nav-item__corner.right-bottom
+                .nav-item__corner.left-bottom
+                .nav-item__text Utilizing Pre-Call Planning Resources
+
+              .item-status
+                .status-title COMPLETED
+          
+
+    //= template/scripts.jade

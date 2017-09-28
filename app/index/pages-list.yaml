@@ -1,0 +1,13 @@
+ProjectTitle: daiichi-sankyo
+
+PageList:
+- file: homepage.html
+  ready: 100
+- file: loging.html
+  ready: 100
+- file: tabs-1.html
+  ready: 100
+- file: tabs-2.html
+  ready: 100
+- file: topic-activities.html
+  ready: 100

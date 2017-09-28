@@ -1,0 +1,657 @@
+@import partials/reset 
+@import partials/sprite
+@import partials/fonts
+@import partials/mixins
+@import partials/const
+@import partials/typography
+@import partials/buttons
+@import partials/forms
+@import partials/layout
+@import partials/plugins
+
+
+
+.text-center  
+  text-align: center
+
+.text-right
+  text-align: right
+
+#scene
+  position: absolute
+
+#scene img 
+  position: relative
+  top: -40px
+  left: -80px
+  max-width: initial
+  transform: scale(1.1)
+
+.title-caption
+  display: inline-block
+  font-family: 'TradeGothic-ExBold'
+  font-size: 1.25vw
+  line-height: 1.3
+  color: #ffffff
+  text-shadow: 0 0 65px rgba(0, 146, 209, 0.85)
+  text-transform: uppercase
+  position: relative
+  padding: 0 60px
+  margin-bottom: 12vh
+  // +media(1600)
+  //   font-size: 28px
+  // +desktop
+  //   font-size: 21px
+  +media(1980)
+    margin-bottom: 6vh
+
+  span
+    position: absolute
+    top: 50%
+    box-shadow: inset 0 0 70px rgba(0, 146, 209, 0.55), 0 0 75px rgba(0, 146, 209, 0.75)
+    margin-top: -51px
+    content: ' '
+    width: 32px
+    height: 102px
+    background: url('../images/title-corner.png') 0 0 no-repeat
+    +media(1980)
+      width: 16px
+      height: 51px 
+      background-size: cover
+      margin-top: -25px
+      box-shadow: inset 0 0 30px rgba(0, 146, 209, 0.55), 0 0 35px rgba(0, 146, 209, 0.75)
+
+  .left-decor
+    left: 0
+
+  .right-decor
+    right: 0
+    transform: rotate(180deg)
+
+.nav-wrap
+  text-align: center
+  margin-bottom: 5vh
+  // +media(1280)
+  //   max-width: 800px
+  //   margin: 0 auto
+
+  &__item 
+    max-width: 17.5vw
+    width: 25%
+    padding: 0 25px
+    display: inline-block
+    vertical-align: top 
+    +media(2200)
+      max-width: 24%
+    +desktop-large
+      padding: 0 10px
+    // +media(1980)
+    //   max-width: 350px
+    // +media(1600)
+    //   max-width: 300px
+    // +media(1366)
+    //   max-width: 270px
+    //   padding: 0 15px
+    // +media(1280)
+    //   max-width: 300px 
+
+.progress
+  height: 20px 
+  background-color: #091c2b
+  border-radius: 8px
+  // box-shadow: inset 0 -2px 1px 2px #aac3cc
+  border-bottom: 1px solid #aac3cc
+  padding: 2px 2px
+  +desktop-large
+    height: 16px
+
+.progress-bar
+  height: 16px
+  background: #45c5fe
+  position: relative
+  border-radius: 8px 0 0 8px
+  box-shadow: -3px 6px 15px #0092d1, -3px -6px 15px #0092d1
+  padding: 7px 0
+  +desktop-large
+    height: 12px 
+    padding: 5px 0
+  &:after
+    position: absolute
+    content: ' '
+    width: 20%  
+    height: 16px
+    right: 0
+    top: 0 
+    border-radius: 8px 0 0 8px
+    background: -moz-linear-gradient(left, rgba(30,168,247,0) 0%, rgba(0,0,0,0.53) 100%)
+    background: -webkit-linear-gradient(left, rgba(30,168,247,0) 0%,rgba(0,0,0,0.53) 100%)
+    background: linear-gradient(to right, rgba(30,168,247,0) 0%,rgba(0,0,0,0.53) 100%)
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#001ea8f7', endColorstr='#87000000',GradientType=1 )
+    +desktop-large
+      height: 12px
+
+  &:before
+    content: ' '
+    display: block
+    width: 100%
+    height: 4px
+    background: -moz-linear-gradient(left, rgba(30,168,247,1) 0%, rgba(255,255,255,1) 46%, rgba(255,255,255,1) 82%, rgba(255,255,255,1) 100%)
+    background: -webkit-linear-gradient(left, rgba(30,168,247,1) 0%,rgba(255,255,255,1) 46%,rgba(255,255,255,1) 82%,rgba(255,255,255,1) 100%)
+    background: linear-gradient(to right, rgba(30,168,247,1) 0%,rgba(255,255,255,1) 46%,rgba(255,255,255,1) 82%,rgba(255,255,255,1) 100%)
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1ea8f7', endColorstr='#ffffff',GradientType=1 )
+        
+
+.nav-item
+  position: relative
+  height: 35.5vh
+  max-height: 440px
+  display: flex
+  flex-wrap: wrap
+  align-items: center
+  justify-content: center
+  padding: 0 25px
+  margin-bottom: 60px
+
+  background: -moz-linear-gradient(top, rgba(45,147,203,0.48) 0%, rgba(45,147,203,0.48) 1%, rgba(45,147,203,0.21) 55%, rgba(45,147,203,0.01) 100%)
+  background: -webkit-linear-gradient(top, rgba(45,147,203,0.48) 0%,rgba(45,147,203,0.48) 1%,rgba(45,147,203,0.21) 55%,rgba(45,147,203,0.01) 100%)
+  background: linear-gradient(to bottom, rgba(45,147,203,0.48) 0%,rgba(45,147,203,0.48) 1%,rgba(45,147,203,0.21) 55%,rgba(45,147,203,0.01) 100%)
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7a2d93cb', endColorstr='#032d93cb',GradientType=0 )
+  border: 3px solid #27a9e0
+
+  transition: all 0.9s ease
+  cursor: pointer
+  +media(2200)
+    margin-bottom: 40px
+    padding: 0 15px
+    max-height: 300px
+  //   min-height: 400px
+  +media(1980)
+    height: 30vh
+
+  +desktop
+    margin-bottom: 20px
+    height: 17.5vh
+
+  // +media(1600)
+  //   min-height: 280px
+
+  &:hover 
+    background: -moz-linear-gradient(top, rgba(45,147,203,0.68) 0%, rgba(45,147,203,0.68) 50%, rgba(45,147,203,0.21) 100%, rgba(45,147,203,0.01) 100%)
+    background: -webkit-linear-gradient(top, rgba(45,147,203,0.68) 0%,rgba(45,147,203,0.68) 50%,rgba(45,147,203,0.21) 100%,rgba(45,147,203,0.01) 100%)
+    background: linear-gradient(to bottom, rgba(45,147,203,0.68) 0%,rgba(45,147,203,0.68) 50%,rgba(45,147,203,0.21) 100%,rgba(45,147,203,0.01) 100%)
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7a2d93cb', endColorstr='#032d93cb',GradientType=0 )
+
+  &--unavailable
+    opacity: 0.3
+    cursor: default
+    &:hover 
+      background: -moz-linear-gradient(top, rgba(45,147,203,0.48) 0%, rgba(45,147,203,0.48) 1%, rgba(45,147,203,0.21) 55%, rgba(45,147,203,0.01) 100%)
+      background: -webkit-linear-gradient(top, rgba(45,147,203,0.48) 0%,rgba(45,147,203,0.48) 1%,rgba(45,147,203,0.21) 55%,rgba(45,147,203,0.01) 100%)
+      background: linear-gradient(to bottom, rgba(45,147,203,0.48) 0%,rgba(45,147,203,0.48) 1%,rgba(45,147,203,0.21) 55%,rgba(45,147,203,0.01) 100%)
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7a2d93cb', endColorstr='#032d93cb',GradientType=0 )
+
+  &--completed
+    &:before
+      position: absolute
+      bottom: -90px
+      left: 50%
+      margin-left: -96.5px
+      content: ' '
+      width: 193px
+      height: 183px
+      background: url('../images/check.png') 0 0 no-repeat
+      +media(1600)
+        width: 96.5px 
+        height: 91.5px
+        background-size: cover
+        margin-left: -48px
+        bottom: -45px
+
+  &__corner
+    position: absolute
+    width: 32px
+    height: 44px
+    +media(1600)
+      width: 21.333333px
+      height: 29.333333px
+
+    &.left-top
+      top: -6px
+      left: -6px
+      background: url('../images/nav-item-corner-top-left.png') 0 0 no-repeat
+      background-size: cover
+      +media(1600)
+        top: -4px 
+        left: -4px
+
+    &.left-bottom
+      bottom: -6px
+      left: -6px
+      background: url('../images/nav-item-corner-bottom-left.png') 0 0 no-repeat
+      background-size: cover
+      +media(1600)
+        bottom: -4px
+        left: -4px
+
+    &.right-top
+      right: -6px
+      top: -6px
+      background: url('../images/nav-item-corner-top-right.png') 0 0 no-repeat 
+      background-size: cover
+      +media(1600)
+        right: -4px 
+        top: -4px 
+
+    &.right-bottom
+      right: -6px
+      bottom: -6px
+      background: url('../images/nav-item-corner-bottom-right.png') 0 0 no-repeat 
+      background-size: cover
+      +media(1600)
+        right: -4px 
+        bottom: -4px
+
+  &__text 
+    color: #ffffff
+    font-size: 47px
+    font-size: 1.8vw
+    font-family: 'TradeGothic-BoldTwo'
+    line-height: 1.2
+    text-shadow: 0 0 65px rgba(0, 146, 209, 0.75)
+    // +media(2200)
+    //   font-size: 38px
+    // +media(1980)
+    //   font-size: 30px
+    // +media(1600)
+    //   font-size: 24px
+    // +media(1366)
+    //   font-size: 22px
+
+.form-logo
+  position: relative
+  z-index: 2
+  +media(1980)
+    max-width: 150px
+    margin: 0 auto
+
+.item-status
+  text-align: center
+  
+.status-title
+  color: #ffffff
+  text-transform: uppercase
+  font-size: 0.9vw
+  color: #ffffff
+  font-family: 'TradeGothic-ExBold'
+  margin-bottom: 4vh
+  +media(1980)
+    font-size: 1.4vw
+    margin-bottom: 3vh
+  // +media(1600)
+  //   font-size: 18px
+  // +desktop
+  //   font-size: 16px
+
+.login-wrap
+  text-align: center
+
+  .title-caption
+    font-size: 2.47vw
+    margin-bottom: 8vh
+    +media(1980)
+      margin-bottom: 6vh
+
+
+.login-form
+  position: relative
+  max-width: 930px
+  padding:  5.5vh 35px 3.5vh
+  margin: 0 auto
+  background: -moz-linear-gradient(top, rgba(45,147,203,0.48) 0%, rgba(45,147,203,0.48) 1%, rgba(45,147,203,0.21) 55%, rgba(45,147,203,0.01) 100%)
+  background: -webkit-linear-gradient(top, rgba(45,147,203,0.48) 0%,rgba(45,147,203,0.48) 1%,rgba(45,147,203,0.21) 55%,rgba(45,147,203,0.01) 100%)
+  background: linear-gradient(to bottom, rgba(45,147,203,0.48) 0%,rgba(45,147,203,0.48) 1%,rgba(45,147,203,0.21) 55%,rgba(45,147,203,0.01) 100%)
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7a2d93cb', endColorstr='#032d93cb',GradientType=0 )
+  border: 3px solid #27a9e0
+  +media(1980)
+    padding: 3vh 35px 1vh
+
+  &:before
+    position: absolute
+    content: ' '
+    width: 650px
+    height: 939px
+    background: url('../images/login-deroc-left.png') 0 0 no-repeat
+    left: -623px
+    top: 150px
+
+  &:after
+    position: absolute
+    right: -655px
+    top: -45%
+    content: ' '
+    width: 684px
+    height: 1043px
+    background: url('../images/login-deroc-right.png') 0 100% no-repeat
+    +media(2000)
+      height: 480px
+
+
+  &__label
+    display: block
+    text-align: left
+    color: #ffffff
+    font-size: 1.5vw
+    margin-bottom: 40px
+    +media(1980)
+      margin-bottom: 20px
+    +desktop
+      font-size: 2vw
+
+  &__input
+    height: 83px
+    box-shadow: 0 0 50px rgba(0, 146, 209, 0.95)
+    border-radius: 50px
+    font-size: 26px
+    +media(1980)
+      height: 55px
+
+  &__submit
+    border: none
+    width: 518px
+    height: 83px
+    margin-top: 40px
+    font-size: 1.8vw
+    color: #ffffff
+    border-radius: 50px
+    font-family: 'TradeGothic-BoldTwo'
+    box-shadow: 0 0 27px 4px rgba(110, 217, 252, 0.95)
+    background: url('../images/btn-bg.png') 0 50% no-repeat
+    +media(1980)
+      height: 60px
+      background-size: cover
+      margin-top: 20px
+    +desktop
+      height: 55px
+      font-size: 2.5vw
+  
+  .form-group
+    margin-bottom: 3.5vh
+
+
+  .login-form-body
+    max-width: 530px 
+    margin: 0 auto 
+
+.checkbox-input
+  display: inline-block
+  color: #ffffff
+  font-size: 1.28vw
+  margin-right: 100px
+  +desktop
+    font-size: 1.8vw
+
+.caption-link-wrap
+  position: absolute
+  left: 130px
+  top: 6vh
+  width: 22vw 
+  height: 33vh
+  display: flex
+  justify-content: center
+  align-items: center
+  +media(2200)
+    left: 60px
+  +media(1980)
+    left: 15px
+    top: 3vh
+
+.caption-link
+  color: #ffffff
+  font-size: 1.28vw
+  line-height: 1.5
+  text-decoration: none
+  display: inline-block
+  max-width: 265px
+  text-align: center
+  transition: all 0.2s ease
+
+  &__arrow
+    margin: 0 10px
+    display: inline-block
+    vertical-align: middle
+    margin-bottom: 2px
+    width: 35px
+    height: 35px
+    background: url('../images/circle-arrow.png') 0 0 no-repeat
+    +media(1980)
+      width: 20px
+      height: 20px 
+      background-size: cover
+
+.fogot-link
+  color: #ffffff
+  font-size: 1.28vw
+  text-decoration: underline
+  +desktop
+    font-size: 1.8vw
+  &:hover, &:focus
+    text-decoration: none
+    color: #ffffff
+
+// tabs
+
+ul.tabs
+  margin: 0px
+  padding: 0px
+  list-style: none
+  margin-left: 22vw
+  display: flex
+  margin-bottom: 7.6vh
+  +media(1980)
+    margin-bottom: 4vh
+
+ul.tabs-2
+  margin-bottom: 3vh
+
+
+
+.tab-content-2
+  .tab-content.current
+    display: flex
+    align-items: flex-end
+
+  .right-content
+    flex: 1 1
+
+  ul.tab-list
+    li
+      padding: 0.5vh 0 
+      min-height: 72px
+      line-height: 55px
+      +media(2000)
+        min-height: 50px
+        line-height: 1.5
+        padding: 1vh 0 
+      +media(1600)
+        min-height: 30px
+        font-size: 1vw
+      +media(1024)
+        font-size: 1.5vh
+      +desktop
+        min-height: 45px
+
+ul.tabs li
+  background: none
+  color: #ffffff
+  font-size: 1.2vw
+  line-height: 1.1
+  text-transform: uppercase
+  display: inline-block
+  padding: 10px
+  cursor: pointer
+  position: relative
+  width: 25%
+  height: 130px
+  text-align: center
+  display: flex
+  align-items: center
+  margin: 0 20px
+  text-shadow: 0 0 65px rgba(0, 146, 209, 0.75)
+  background-color: rgba(45, 147, 203, 0.5)
+
+  border: 3px solid #27a9e0
+  opacity: 0.3
+  +media(1980)
+    height: 100px
+    margin: 0 10px
+
+
+ul.tabs li.current
+  opacity: 1
+
+.tab-content
+  display: none
+
+.left-content
+  float: left
+  width: 22vw
+  .tab-list li
+    text-align: left
+
+.right-content
+  @extend .clearfix
+
+  .col
+    width: 50%
+    float: left
+    padding: 0 15px
+
+.tab-list
+  li
+    padding: 1.4vh 0
+    border-bottom: 2px solid #00adee
+    color: #ffffff
+    font-size: 1.2vw
+    text-align: center
+    +media(1366)
+      border-width: 1px
+      padding: 1vh 0
+    +desktop
+      font-size: 1.7vw
+
+    &:first-child
+      border-top: none
+
+    &.color-blue
+      color: #0ebdff
+
+
+.circle-arrow-large
+  float: right
+  width: 42px
+  height: 42px
+  background: url('../images/circle-arrow-large.png') 0 0 no-repeat
+  margin-top: 7px
+  +media(1980)
+    width: 28px
+    height: 28px 
+    background-size: cover
+  +media(1600)
+    width: 22px
+    height: 22px 
+    margin-top: 0
+
+.tab-content.current
+  display: inherit
+
+.description-item
+  border-bottom: 2px solid #00adee
+  padding: 1.2vh 0
+  @extend .clearfix
+
+
+  &:first-child 
+    border-top: 2px solid #00adee
+  &__title
+    font-size: 1.3vw
+    color: #ffffff
+    line-height: 1.2
+    float: left
+    min-width: 22vw
+
+  &__body
+    margin-left: 22vw
+    font-size: 1.3vw
+    color: #ffffff
+    line-height: 1.2
+
+  ul
+    margin-bottom: 0
+    li 
+      position: relative
+      padding-left: 40px
+      margin-bottom: 15px
+      +media(1980)
+        padding-left: 20px
+
+      &:before
+        position: absolute
+        content: ' '
+        width: 12px
+        height: 12px
+        background-color: #ffffff
+        border-radius: 50%
+        left: 0
+        top: 50%
+        margin-top: -6px
+        +media(1980)
+          width: 6px 
+          height: 6px
+          margin-top: -3px
+
+.exit-link
+  position: absolute
+  bottom: 40px
+  left: 60px
+  width: 23px
+  height: 45px
+  +media(2000)
+    bottom: 15px
+    left: 25px
+
+  &:before
+    position: absolute
+    left: 0
+    top: 50%
+    transform: translate(0, -50%)
+    content: ' '
+    width: 23px
+    height: 45px
+    background: url('../images/back-arrow.png') 0 0 no-repeat
+    +media(1600)
+      width: 11.5px
+      height: 22.5px
+      background-size: cover
+
+.back-link
+  position: relative
+  bottom: -35px
+  font-size: 1.3vw
+  color: #ffffff
+  line-height: 1.2
+  padding-left: 60px 
+  transition: all 0.2s ease
+  &:hover, &:focus
+    color: #00adee
+    text-decoration: none
+
+
+  &:before
+    position: absolute
+    left: 0
+    top: 50%
+    transform: translate(0, -50%)
+    content: ' '
+    width: 23px
+    height: 45px
+    background: url('../images/back-arrow.png') 0 0 no-repeat

@@ -1,0 +1,139 @@
+doctype html
+html(xmlns='http://www.w3.org/1999/xhtml')
+
+  //= template/head.jade
+
+  body
+    #wrapper
+
+      #scene
+        div(data-depth="0.2").layer
+          img(src="images/interactive-bg.png", alt="")
+
+      //= template/header.jade
+
+      section.middle
+        
+        .container
+
+          a(href="#!").back-link Back to Dashboard
+
+          ul.tabs
+            li.tab-link.current(data-tab='tab-1') FUNDAMENTALS OF MANAGED CARE
+              .nav-item__corner.left-top
+              .nav-item__corner.right-top
+              .nav-item__corner.right-bottom
+              .nav-item__corner.left-bottom
+
+            li.tab-link(data-tab='tab-2') ADVANCED DYNAMICS WITHIN MANAGED CARE
+              .nav-item__corner.left-top
+              .nav-item__corner.right-top
+              .nav-item__corner.right-bottom
+              .nav-item__corner.left-bottom
+
+            li.tab-link(data-tab='tab-3') DYNAMICS OF BUY AND BILL
+              .nav-item__corner.left-top
+              .nav-item__corner.right-top
+              .nav-item__corner.right-bottom
+              .nav-item__corner.left-bottom
+
+            li.tab-link(data-tab='tab-4') ONCOLOGY MANAGED CARE
+              .nav-item__corner.left-top
+              .nav-item__corner.right-top
+              .nav-item__corner.right-bottom
+              .nav-item__corner.left-bottom
+
+
+          .tab-content-wrap
+            #tab-1.tab-content.current
+
+              .tab-description
+
+                .description-item
+                  .description-item__title Rep First Last Name
+                  .description-item__body
+
+                .description-item
+                  .description-item__title Completed
+                  .description-item__body 4/1/2017
+
+                .description-item
+                  .description-item__title Assessment
+                  .description-item__body 
+                    p FIRST NAME may need more review time with the content for this topic. 
+                    p Consider reviewing the following module sections with this representative:
+                    ul
+                      li Topic 1
+                      li Topic 2
+                      li Topic 3
+                      li Topic 4
+
+
+
+            #tab-2.tab-content
+              .tab-description
+
+                .description-item
+                  .description-item__title Rep First Last Name
+                  .description-item__body
+
+                .description-item
+                  .description-item__title Completed
+                  .description-item__body 16/12/2014
+
+                .description-item
+                  .description-item__title Assessment
+                  .description-item__body 
+                    p FIRST NAME may need more review time with the content for this topic. 
+                    p Consider reviewing the following module sections with this representative:
+                    ul
+                      li Topic 21
+                      li Topic 22
+                      li Topic 23
+                      li Topic 24
+            #tab-3.tab-content
+              .tab-description
+
+                .description-item
+                  .description-item__title Rep First Last Name
+                  .description-item__body
+
+                .description-item
+                  .description-item__title Completed
+                  .description-item__body 8/12/2017
+
+                .description-item
+                  .description-item__title Assessment
+                  .description-item__body 
+                    p FIRST NAME may need more review time with the content for this topic. 
+                    p Consider reviewing the following module sections with this representative:
+                    ul
+                      li Topic 11
+                      li Topic 12
+                      li Topic 13
+                      li Topic 14
+            #tab-4.tab-content
+              .tab-description
+
+                .description-item
+                  .description-item__title Rep First Last Name
+                  .description-item__body
+
+                .description-item
+                  .description-item__title Completed
+                  .description-item__body 24/2/2016
+
+                .description-item
+                  .description-item__title Assessment
+                  .description-item__body 
+                    p FIRST NAME may need more review time with the content for this topic. 
+                    p Consider reviewing the following module sections with this representative:
+                    ul
+                      li Topic 1
+                      li Topic 2
+                      li Topic 3
+                      li Topic 4
+
+          
+
+    //= template/scripts.jade

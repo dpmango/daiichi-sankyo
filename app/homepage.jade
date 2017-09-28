@@ -1,0 +1,94 @@
+doctype html
+html(xmlns='http://www.w3.org/1999/xhtml')
+
+  //= template/head.jade
+
+  body
+    #wrapper
+
+      #scene
+        div(data-depth="0.2").layer
+          img(src="images/interactive-bg.png", alt="")
+
+      header.header.header-index
+        .container
+          .logo
+            a(href="#!")
+              img(src="images/logo.png", alt="logo")
+          
+          .header-body
+
+            .user-name WELCOME [NAME]
+            .user-name YOU HAVE COMPLETED [X] OF [X] MODULES
+            .user-name SEE YOUR DASHBOARD BELOW TO CONTINUE YOUR TRAINING
+        
+          
+          
+
+      section.middle
+        .container
+          .text-center
+            .title-caption
+              span.left-decor 
+              span.right-decor 
+              | TAP ON AN AVAILABLE COURSE TO START OR COMPLETE YOUR TRAINING
+
+          .nav-wrap
+            .nav-wrap__item
+              .nav-item
+                .nav-item__corner.left-top
+                .nav-item__corner.right-top
+                .nav-item__corner.right-bottom
+                .nav-item__corner.left-bottom
+                .nav-item__text Fundamentals of Managed Care
+
+              .item-status
+                .status-title 60% COMPLETE
+                .progress
+                  .progress-bar(style="width:60%")
+
+
+            .nav-wrap__item
+              .nav-item
+                .nav-item__corner.left-top
+                .nav-item__corner.right-top
+                .nav-item__corner.right-bottom
+                .nav-item__corner.left-bottom
+                .nav-item__text Advanced Dynamics within Managed Care
+
+              .item-status
+                .status-title 25% COMPLETE
+                .progress
+                  .progress-bar(style="width:25%")
+
+            .nav-wrap__item
+              .nav-item.nav-item--unavailable
+                .nav-item__corner.left-top
+                .nav-item__corner.right-top
+                .nav-item__corner.right-bottom
+                .nav-item__corner.left-bottom
+                .nav-item__text Dynamics </br> of Buy & Bill
+
+              .item-status
+                .status-title UNAVAILABLE
+
+            .nav-wrap__item
+              .nav-item.nav-item--completed
+                .nav-item__corner.left-top
+                .nav-item__corner.right-top
+                .nav-item__corner.right-bottom
+                .nav-item__corner.left-bottom
+                .nav-item__text Oncology </br> Managed Care
+
+              .item-status
+                .status-title COMPLETED
+
+          .text-right
+            a(href="#!").btn
+              span.btn-divider.left
+              span.btn-divider.right
+              | Manager’s Dashboard
+
+          
+
+    //= template/scripts.jade

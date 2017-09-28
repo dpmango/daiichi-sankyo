@@ -1,0 +1,231 @@
+doctype html
+html(xmlns='http://www.w3.org/1999/xhtml')
+
+  //= template/head.jade
+
+  body
+    #wrapper
+
+      #scene
+        div(data-depth="0.2").layer
+          img(src="images/interactive-bg.png", alt="")
+
+      //= template/header.jade
+
+      section.middle
+        
+        .container
+          
+          
+          a(href="#!").exit-link
+
+          .caption-link-wrap
+            span.caption-link 
+              | TAP the
+              span.caption-link__arrow
+              | </br> next to each rep </br> to see coaching </br>opportunities
+
+          ul.tabs.tabs-2
+            li.tab-link.current(data-tab='tab-1') FUNDAMENTALS OF MANAGED CARE
+              .nav-item__corner.left-top
+              .nav-item__corner.right-top
+              .nav-item__corner.right-bottom
+              .nav-item__corner.left-bottom
+
+            li.tab-link(data-tab='tab-2') ADVANCED DYNAMICS WITHIN MANAGED CARE
+              .nav-item__corner.left-top
+              .nav-item__corner.right-top
+              .nav-item__corner.right-bottom
+              .nav-item__corner.left-bottom
+
+            li.tab-link(data-tab='tab-3') DYNAMICS OF BUY AND BILL
+              .nav-item__corner.left-top
+              .nav-item__corner.right-top
+              .nav-item__corner.right-bottom
+              .nav-item__corner.left-bottom
+
+            li.tab-link(data-tab='tab-4') ONCOLOGY MANAGED CARE
+              .nav-item__corner.left-top
+              .nav-item__corner.right-top
+              .nav-item__corner.right-bottom
+              .nav-item__corner.left-bottom
+
+
+          .tab-content-wrap.tab-content-2
+            #tab-1.tab-content.current
+              .left-content
+                ul.tab-list
+                  li Rep First Last Name
+                    span.circle-arrow-large
+                  li Rep First Last Name
+                    span.circle-arrow-large
+                  li Rep First Last Name
+                    span.circle-arrow-large
+                  li Rep First Last Name
+                    span.circle-arrow-large
+                  li Rep First Last Name
+                    span.circle-arrow-large
+                  li Rep First Last Name
+                    span.circle-arrow-large
+
+
+              .right-content
+                .col
+
+                  ul.tab-list
+                    li.color-blue Managed Care 101
+                    li.color-blue DSI Average: 48%
+                    li 45%
+                    li 47%
+                    li 55%
+                    li 61%
+                    li In progress
+                    li In progress
+                    li Not started
+                
+                .col
+                  ul.tab-list
+                    li.color-blue Managed Care 102
+                    li.color-blue DSI Average: 52%
+                    li Not started
+                    li In progress
+                    li In progress
+                    li In progress
+                    li Not started
+                    li Not started
+                    li Not started
+
+
+            #tab-2.tab-content
+              .left-content
+                ul.tab-list
+                  li Rep First Last Name
+                    span.circle-arrow-large
+                  li Rep First Last Name
+                    span.circle-arrow-large
+                  li Rep First Last Name
+                    span.circle-arrow-large
+                  li Rep First Last Name
+                    span.circle-arrow-large
+                  li Rep First Last Name
+                    span.circle-arrow-large
+                  li Rep First Last Name
+                    span.circle-arrow-large
+
+
+              .right-content
+                .col
+
+                  ul.tab-list
+                    li.color-blue Managed Care 101
+                    li.color-blue DSI Average: 48%
+                    li 45%
+                    li 17%
+                    li 21%
+                    li 99%
+                    li In progress
+                    li In progress
+                    li In progress
+                
+                .col
+                  ul.tab-list
+                    li.color-blue Managed Care 102
+                    li.color-blue DSI Average: 52%
+                    li Not started
+                    li In progress
+                    li In progress
+                    li Not started
+                    li Not started
+                    li Not started
+                    li In progress
+              
+            #tab-3.tab-content
+              .left-content
+                ul.tab-list
+                  li Rep First Last Name
+                    span.circle-arrow-large
+                  li Rep First Last Name
+                    span.circle-arrow-large
+                  li Rep First Last Name
+                    span.circle-arrow-large
+                  li Rep First Last Name
+                    span.circle-arrow-large
+                  li Rep First Last Name
+                    span.circle-arrow-large
+                  li Rep First Last Name
+                    span.circle-arrow-large
+
+
+              .right-content
+                .col
+
+                  ul.tab-list
+                    li.color-blue Managed Care 101
+                    li.color-blue DSI Average: 48%
+                    li 21%
+                    li 47%
+                    li 87%
+                    li 66%
+                    li In progress
+                    li In progress
+                    li Not started
+                
+                .col
+                  ul.tab-list
+                    li.color-blue Managed Care 102
+                    li.color-blue DSI Average: 52%
+                    li Not started
+                    li In progress
+                    li Not started
+                    li In progress
+                    li Not started
+                    li Not started
+                    li In progress
+             
+            #tab-4.tab-content
+              .left-content
+                ul.tab-list
+                  li Rep First Last Name
+                    span.circle-arrow-large
+                  li Rep First Last Name
+                    span.circle-arrow-large
+                  li Rep First Last Name
+                    span.circle-arrow-large
+                  li Rep First Last Name
+                    span.circle-arrow-large
+                  li Rep First Last Name
+                    span.circle-arrow-large
+                  li Rep First Last Name
+                    span.circle-arrow-large
+
+
+              .right-content
+                .col
+
+                  ul.tab-list
+                    li.color-blue Managed Care 101
+                    li.color-blue DSI Average: 48%
+                    li 45%
+                    li 25%
+                    li 66%
+                    li 80%
+                    li In progress
+                    li Not started
+                    li In progress
+                
+                .col
+                  ul.tab-list
+                    li.color-blue Managed Care 102
+                    li.color-blue DSI Average: 52%
+                    li In progress
+                    li Not started
+                    li In progress
+                    li Not started
+                    li Not started
+                    li In progress
+                    li Not started
+           
+
+          
+
+    //= template/scripts.jade

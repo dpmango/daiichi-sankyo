@@ -1,0 +1,50 @@
+doctype html
+html(xmlns='http://www.w3.org/1999/xhtml')
+
+  //= template/head.jade
+
+  body
+    #wrapper
+
+      section.middle.middle-full
+        #scene
+          div(data-depth="0.2").layer
+            img(src="images/interactive-bg.png", alt="")
+
+        .login-wrap
+          .title-caption
+            span.left-decor 
+            span.right-decor 
+            | Managed Care Training Platform
+
+          form.login-form
+            .nav-item__corner.left-top
+            .nav-item__corner.right-top
+            .nav-item__corner.right-bottom
+            .nav-item__corner.left-bottom
+
+            .login-form-body
+              .form-group
+                label.login-form__label(for="input-1") USERNAME
+                input.login-form__input#input-1(type="text", name="")
+
+              .form-group
+                label.login-form__label(for="input-2") PASSWORD
+                input.login-form__input#input-2(type="text", name="")
+
+              .form-group
+                button(type="submit").login-form__submit LOGIN
+
+            .form-group
+              .checkbox-input
+                input(type="checkbox" class="checkbox" id="checkbox-1")
+                label(for="checkbox-1") <span></span> Remember Me
+
+              a(href="#!").fogot-link Forgot Your Password?
+
+          .form-logo
+            a(href="#!")
+              img(src="images/logo.png", alt="logo")
+          
+
+    //= template/scripts.jade
